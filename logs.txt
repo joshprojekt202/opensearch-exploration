@@ -1,0 +1,573 @@
+Enabling execution of install_demo_configuration.sh for OpenSearch Security Plugin
+**************************************************************************
+** This tool will be deprecated in the next major release of OpenSearch **
+** https://github.com/opensearch-project/security/issues/1755           **
+**************************************************************************
+OpenSearch Security Demo Installer
+ ** Warning: Do not use on production or public reachable systems **
+Basedir: /usr/share/opensearch
+OpenSearch install type: rpm/deb on Amazon Linux release 2023 (Amazon Linux)
+OpenSearch config dir: /usr/share/opensearch/config
+OpenSearch config file: /usr/share/opensearch/config/opensearch.yml
+OpenSearch bin dir: /usr/share/opensearch/bin
+OpenSearch plugins dir: /usr/share/opensearch/plugins
+OpenSearch lib dir: /usr/share/opensearch/lib
+Detected OpenSearch Version: x-content-2.11.1
+Detected OpenSearch Security Version: 2.11.1.0
+
+### Success
+### Execute this script now on all your nodes and then start all nodes
+### OpenSearch Security will be automatically initialized.
+### If you like to change the runtime configuration 
+### change the files in ../../../config/opensearch-security and execute: 
+"/usr/share/opensearch/plugins/opensearch-security/tools/securityadmin.sh" -cd "/usr/share/opensearch/config/opensearch-security" -icl -key "/usr/share/opensearch/config/kirk-key.pem" -cert "/usr/share/opensearch/config/kirk.pem" -cacert "/usr/share/opensearch/config/root-ca.pem" -nhnv
+### or run ./securityadmin_demo.sh
+### To use the Security Plugin ConfigurationGUI
+### To access your secured cluster open https://<hostname>:<HTTP port> and log in with admin/admin.
+### (Ignore the SSL certificate warning because we installed self-signed demo certificates)
+Enabling OpenSearch Security Plugin
+Enabling execution of OPENSEARCH_HOME/bin/opensearch-performance-analyzer/performance-analyzer-agent-cli for OpenSearch Performance Analyzer Plugin
+[2024-01-20T23:19:44,017][INFO ][o.o.n.Node               ] [d95ac1b4c88b] version[2.11.1], pid[213], build[tar/6b1986e964d440be9137eba1413015c31c5a7752/2023-11-29T21:43:10.135035992Z], OS[Linux/6.1.66-060166-generic/amd64], JVM[Eclipse Adoptium/OpenJDK 64-Bit Server VM/17.0.8/17.0.8+7]
+[2024-01-20T23:19:44,019][INFO ][o.o.n.Node               ] [d95ac1b4c88b] JVM home [/usr/share/opensearch/jdk], using bundled JDK/JRE [true]
+[2024-01-20T23:19:44,019][INFO ][o.o.n.Node               ] [d95ac1b4c88b] JVM arguments [-Xshare:auto, -Dopensearch.networkaddress.cache.ttl=60, -Dopensearch.networkaddress.cache.negative.ttl=10, -XX:+AlwaysPreTouch, -Xss1m, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djna.nosys=true, -XX:-OmitStackTraceInFastThrow, -XX:+ShowCodeDetailsInExceptionMessages, -Dio.netty.noUnsafe=true, -Dio.netty.noKeySetOptimization=true, -Dio.netty.recycler.maxCapacityPerThread=0, -Dio.netty.allocator.numDirectArenas=0, -Dlog4j.shutdownHookEnabled=false, -Dlog4j2.disable.jmx=true, -Djava.locale.providers=SPI,COMPAT, -Xms1g, -Xmx1g, -XX:+UseG1GC, -XX:G1ReservePercent=25, -XX:InitiatingHeapOccupancyPercent=30, -Djava.io.tmpdir=/tmp/opensearch-6632370712255970341, -XX:+HeapDumpOnOutOfMemoryError, -XX:HeapDumpPath=data, -XX:ErrorFile=logs/hs_err_pid%p.log, -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m, -Djava.util.concurrent.ForkJoinPool.common.threadFactory=org.opensearch.secure_sm.SecuredForkJoinWorkerThreadFactory, -Dclk.tck=100, -Djdk.attach.allowAttachSelf=true, -Djava.security.policy=/usr/share/opensearch/config/opensearch-performance-analyzer/opensearch_security.policy, --add-opens=jdk.attach/sun.tools.attach=ALL-UNNAMED, -Dopensearch.cgroups.hierarchy.override=/, -XX:MaxDirectMemorySize=536870912, -Dopensearch.path.home=/usr/share/opensearch, -Dopensearch.path.conf=/usr/share/opensearch/config, -Dopensearch.distribution.type=tar, -Dopensearch.bundled_jdk=true]
+[2024-01-20T23:19:45,453][INFO ][o.o.s.s.t.SSLConfig      ] [d95ac1b4c88b] SSL dual mode is disabled
+[2024-01-20T23:19:45,453][INFO ][o.o.s.OpenSearchSecurityPlugin] [d95ac1b4c88b] OpenSearch Config path is /usr/share/opensearch/config
+[2024-01-20T23:19:45,636][INFO ][o.o.s.s.DefaultSecurityKeyStore] [d95ac1b4c88b] JVM supports TLSv1.3
+[2024-01-20T23:19:45,638][INFO ][o.o.s.s.DefaultSecurityKeyStore] [d95ac1b4c88b] Config directory is /usr/share/opensearch/config/, from there the key- and truststore files are resolved relatively
+[2024-01-20T23:19:45,972][INFO ][o.o.s.s.DefaultSecurityKeyStore] [d95ac1b4c88b] TLS Transport Client Provider : JDK
+[2024-01-20T23:19:45,972][INFO ][o.o.s.s.DefaultSecurityKeyStore] [d95ac1b4c88b] TLS Transport Server Provider : JDK
+[2024-01-20T23:19:45,972][INFO ][o.o.s.s.DefaultSecurityKeyStore] [d95ac1b4c88b] TLS HTTP Provider             : JDK
+[2024-01-20T23:19:45,972][INFO ][o.o.s.s.DefaultSecurityKeyStore] [d95ac1b4c88b] Enabled TLS protocols for transport layer : [TLSv1.3, TLSv1.2]
+[2024-01-20T23:19:45,972][INFO ][o.o.s.s.DefaultSecurityKeyStore] [d95ac1b4c88b] Enabled TLS protocols for HTTP layer      : [TLSv1.3, TLSv1.2]
+[2024-01-20T23:19:46,016][INFO ][o.o.s.OpenSearchSecurityPlugin] [d95ac1b4c88b] Clustername: docker-cluster
+[2024-01-20T23:19:46,022][WARN ][o.o.s.OpenSearchSecurityPlugin] [d95ac1b4c88b] Directory /usr/share/opensearch/config has insecure file permissions (should be 0700)
+[2024-01-20T23:19:46,510][INFO ][o.o.p.c.c.PluginSettings ] [d95ac1b4c88b] Config: metricsLocation: /dev/shm/performanceanalyzer/, metricsDeletionInterval: 1, httpsEnabled: false, cleanup-metrics-db-files: true, batch-metrics-retention-period-minutes: 7, rpc-port: 9650, webservice-port 9600
+[2024-01-20T23:19:46,862][INFO ][o.o.i.r.ReindexPlugin    ] [d95ac1b4c88b] ReindexPlugin reloadSPI called
+[2024-01-20T23:19:46,863][INFO ][o.o.i.r.ReindexPlugin    ] [d95ac1b4c88b] Unable to find any implementation for RemoteReindexExtension
+[2024-01-20T23:19:46,887][INFO ][o.o.j.JobSchedulerPlugin ] [d95ac1b4c88b] Loaded scheduler extension: opendistro_anomaly_detector, index: .opendistro-anomaly-detector-jobs
+[2024-01-20T23:19:46,909][INFO ][o.o.j.JobSchedulerPlugin ] [d95ac1b4c88b] Loaded scheduler extension: reports-scheduler, index: .opendistro-reports-definitions
+[2024-01-20T23:19:46,911][INFO ][o.o.j.JobSchedulerPlugin ] [d95ac1b4c88b] Loaded scheduler extension: opendistro-index-management, index: .opendistro-ism-config
+[2024-01-20T23:19:46,912][INFO ][o.o.j.JobSchedulerPlugin ] [d95ac1b4c88b] Loaded scheduler extension: scheduler_geospatial_ip2geo_datasource, index: .scheduler-geospatial-ip2geo-datasource
+[2024-01-20T23:19:46,918][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [aggs-matrix-stats]
+[2024-01-20T23:19:46,918][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [analysis-common]
+[2024-01-20T23:19:46,918][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [geo]
+[2024-01-20T23:19:46,919][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [ingest-common]
+[2024-01-20T23:19:46,919][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [ingest-geoip]
+[2024-01-20T23:19:46,919][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [ingest-user-agent]
+[2024-01-20T23:19:46,919][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [lang-expression]
+[2024-01-20T23:19:46,919][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [lang-mustache]
+[2024-01-20T23:19:46,919][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [lang-painless]
+[2024-01-20T23:19:46,919][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [mapper-extras]
+[2024-01-20T23:19:46,920][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [opensearch-dashboards]
+[2024-01-20T23:19:46,920][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [parent-join]
+[2024-01-20T23:19:46,920][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [percolator]
+[2024-01-20T23:19:46,920][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [rank-eval]
+[2024-01-20T23:19:46,920][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [reindex]
+[2024-01-20T23:19:46,920][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [repository-url]
+[2024-01-20T23:19:46,920][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [search-pipeline-common]
+[2024-01-20T23:19:46,920][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [systemd]
+[2024-01-20T23:19:46,920][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded module [transport-netty4]
+[2024-01-20T23:19:46,921][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-alerting]
+[2024-01-20T23:19:46,921][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-anomaly-detection]
+[2024-01-20T23:19:46,921][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-asynchronous-search]
+[2024-01-20T23:19:46,921][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-cross-cluster-replication]
+[2024-01-20T23:19:46,921][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-custom-codecs]
+[2024-01-20T23:19:46,921][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-geospatial]
+[2024-01-20T23:19:46,921][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-index-management]
+[2024-01-20T23:19:46,921][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-job-scheduler]
+[2024-01-20T23:19:46,922][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-knn]
+[2024-01-20T23:19:46,922][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-ml]
+[2024-01-20T23:19:46,922][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-neural-search]
+[2024-01-20T23:19:46,922][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-notifications]
+[2024-01-20T23:19:46,922][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-notifications-core]
+[2024-01-20T23:19:46,922][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-observability]
+[2024-01-20T23:19:46,923][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-performance-analyzer]
+[2024-01-20T23:19:46,923][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-reports-scheduler]
+[2024-01-20T23:19:46,923][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-security]
+[2024-01-20T23:19:46,923][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-security-analytics]
+[2024-01-20T23:19:46,923][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] loaded plugin [opensearch-sql]
+[2024-01-20T23:19:46,964][INFO ][o.o.s.OpenSearchSecurityPlugin] [d95ac1b4c88b] Disabled https compression by default to mitigate BREACH attacks. You can enable it by setting 'http.compression: true' in opensearch.yml
+[2024-01-20T23:19:46,967][INFO ][o.o.e.ExtensionsManager  ] [d95ac1b4c88b] ExtensionsManager initialized
+[2024-01-20T23:19:46,975][DEPRECATION][o.o.d.c.s.Settings       ] [d95ac1b4c88b] [node.max_local_storage_nodes] setting was deprecated in OpenSearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+[2024-01-20T23:19:46,983][INFO ][o.o.e.NodeEnvironment    ] [d95ac1b4c88b] using [1] data paths, mounts [[/ (overlay)]], net usable_space [27gb], net total_space [30gb], types [overlay]
+[2024-01-20T23:19:46,983][INFO ][o.o.e.NodeEnvironment    ] [d95ac1b4c88b] heap size [1gb], compressed ordinary object pointers [true]
+[2024-01-20T23:19:47,017][INFO ][o.o.n.Node               ] [d95ac1b4c88b] node name [d95ac1b4c88b], node ID [z9cVYvh9Swi5EUvpYn7ExA], cluster name [docker-cluster], roles [ingest, remote_cluster_client, data, cluster_manager]
+[2024-01-20T23:19:48,843][DEPRECATION][o.o.d.c.s.Settings       ] [d95ac1b4c88b] [index.store.hybrid.mmap.extensions] setting was deprecated in OpenSearch and will be removed in a future release! See the breaking changes documentation for the next major version.
+[2024-01-20T23:19:49,558][INFO ][o.o.n.p.NeuralSearch     ] [d95ac1b4c88b] Registering hybrid query phase searcher with feature flag [plugins.neural_search.hybrid_search_disabled]
+[2024-01-20T23:19:49,753][WARN ][o.o.s.c.Salt             ] [d95ac1b4c88b] If you plan to use field masking pls configure compliance salt e1ukloTsQlOgPquJ to be a random string of 16 chars length identical on all nodes
+[2024-01-20T23:19:49,786][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Message routing enabled: true
+[2024-01-20T23:19:49,813][INFO ][o.o.s.f.SecurityFilter   ] [d95ac1b4c88b] <NONE> indices are made immutable.
+[2024-01-20T23:19:50,114][INFO ][o.o.a.b.ADCircuitBreakerService] [d95ac1b4c88b] Registered memory breaker.
+[2024-01-20T23:19:50,445][INFO ][o.o.m.b.MLCircuitBreakerService] [d95ac1b4c88b] Registered ML memory breaker.
+[2024-01-20T23:19:50,446][INFO ][o.o.m.b.MLCircuitBreakerService] [d95ac1b4c88b] Registered ML disk breaker.
+[2024-01-20T23:19:50,446][INFO ][o.o.m.b.MLCircuitBreakerService] [d95ac1b4c88b] Registered ML native memory breaker.
+[2024-01-20T23:19:50,516][INFO ][o.r.Reflections          ] [d95ac1b4c88b] Reflections took 40 ms to scan 1 urls, producing 20 keys and 51 values 
+[2024-01-20T23:19:50,571][WARN ][o.o.s.p.SQLPlugin        ] [d95ac1b4c88b] Master key is a required config for using create and update datasource APIs. Please set plugins.query.datasources.encryption.masterkey config in opensearch.yml in all the cluster nodes. More details can be found here: https://github.com/opensearch-project/sql/blob/main/docs/user/ppl/admin/datasources.rst#master-key-config-for-encrypting-credential-information
+[2024-01-20T23:19:50,597][WARN ][o.o.s.p.SQLPlugin        ] [d95ac1b4c88b] Async Query APIs are disabled as plugins.query.executionengine.spark.config is not configured properly in cluster settings. Please configure and restart the domain to enable Async Query APIs
+[2024-01-20T23:19:51,080][INFO ][o.o.t.NettyAllocator     ] [d95ac1b4c88b] creating NettyAllocator with the following configs: [name=unpooled, suggested_max_allocation_size=256kb, factors={opensearch.unsafe.use_unpooled_allocator=null, g1gc_enabled=true, g1gc_region_size=1mb, heap_size=1gb}]
+[2024-01-20T23:19:51,083][INFO ][o.o.s.s.t.SSLConfig      ] [d95ac1b4c88b] SSL dual mode is disabled
+[2024-01-20T23:19:51,181][INFO ][o.o.d.DiscoveryModule    ] [d95ac1b4c88b] using discovery type [single-node] and seed hosts providers [settings]
+[2024-01-20T23:19:51,551][WARN ][o.o.g.DanglingIndicesState] [d95ac1b4c88b] gateway.auto_import_dangling_indices is disabled, dangling indices will not be automatically detected or imported and must be managed manually
+[2024-01-20T23:19:51,958][INFO ][o.o.p.h.c.PerformanceAnalyzerConfigAction] [d95ac1b4c88b] PerformanceAnalyzer Enabled: false
+[2024-01-20T23:19:51,987][INFO ][o.o.n.Node               ] [d95ac1b4c88b] initialized
+[2024-01-20T23:19:51,987][INFO ][o.o.n.Node               ] [d95ac1b4c88b] starting ...
+[2024-01-20T23:19:52,009][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [windows_logtype.json] log type
+[2024-01-20T23:19:52,010][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [waf_logtype.json] log type
+[2024-01-20T23:19:52,010][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [vpcflow_logtype.json] log type
+[2024-01-20T23:19:52,011][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [test_windows_logtype.json] log type
+[2024-01-20T23:19:52,011][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [s3_logtype.json] log type
+[2024-01-20T23:19:52,011][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [others_web_logtype.json] log type
+[2024-01-20T23:19:52,012][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [others_proxy_logtype.json] log type
+[2024-01-20T23:19:52,012][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [others_macos_logtype.json] log type
+[2024-01-20T23:19:52,013][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [others_compliance_logtype.json] log type
+[2024-01-20T23:19:52,013][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [others_cloud_logtype.json] log type
+[2024-01-20T23:19:52,014][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [others_apt_logtype.json] log type
+[2024-01-20T23:19:52,014][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [others_application_logtype.json] log type
+[2024-01-20T23:19:52,015][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [okta_logtype.json] log type
+[2024-01-20T23:19:52,015][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [network_logtype.json] log type
+[2024-01-20T23:19:52,016][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [netflow_logtype.json] log type
+[2024-01-20T23:19:52,016][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [m365_logtype.json] log type
+[2024-01-20T23:19:52,016][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [linux_logtype.json] log type
+[2024-01-20T23:19:52,016][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [gworkspace_logtype.json] log type
+[2024-01-20T23:19:52,017][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [github_logtype.json] log type
+[2024-01-20T23:19:52,017][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [dns_logtype.json] log type
+[2024-01-20T23:19:52,018][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [cloudtrail_logtype.json] log type
+[2024-01-20T23:19:52,018][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [azure_logtype.json] log type
+[2024-01-20T23:19:52,018][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [apache_access_logtype.json] log type
+[2024-01-20T23:19:52,019][INFO ][o.o.s.l.BuiltinLogTypeLoader] [d95ac1b4c88b] Loaded [ad_ldap_logtype.json] log type
+[2024-01-20T23:19:52,092][INFO ][o.o.t.TransportService   ] [d95ac1b4c88b] publish_address {172.17.0.3:9300}, bound_addresses {[::]:9300}
+[2024-01-20T23:19:52,094][INFO ][o.o.t.TransportService   ] [d95ac1b4c88b] Remote clusters initialized successfully.
+[2024-01-20T23:19:52,196][WARN ][o.o.b.BootstrapChecks    ] [d95ac1b4c88b] max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+[2024-01-20T23:19:52,203][INFO ][o.o.c.c.Coordinator      ] [d95ac1b4c88b] setting initial configuration to VotingConfiguration{z9cVYvh9Swi5EUvpYn7ExA}
+[2024-01-20T23:19:52,348][INFO ][o.o.c.s.MasterService    ] [d95ac1b4c88b] elected-as-cluster-manager ([1] nodes joined)[{d95ac1b4c88b}{z9cVYvh9Swi5EUvpYn7ExA}{9SdflYqUQrmAdQChqzKIUw}{172.17.0.3}{172.17.0.3:9300}{dimr}{shard_indexing_pressure_enabled=true} elect leader, _BECOME_CLUSTER_MANAGER_TASK_, _FINISH_ELECTION_], term: 1, version: 1, delta: cluster-manager node changed {previous [], current [{d95ac1b4c88b}{z9cVYvh9Swi5EUvpYn7ExA}{9SdflYqUQrmAdQChqzKIUw}{172.17.0.3}{172.17.0.3:9300}{dimr}{shard_indexing_pressure_enabled=true}]}
+[2024-01-20T23:19:52,372][INFO ][o.o.c.c.CoordinationState] [d95ac1b4c88b] cluster UUID set to [Rca_Uyz_QpWyrW2dKpKbqg]
+[2024-01-20T23:19:52,390][INFO ][o.o.c.s.ClusterApplierService] [d95ac1b4c88b] cluster-manager node changed {previous [], current [{d95ac1b4c88b}{z9cVYvh9Swi5EUvpYn7ExA}{9SdflYqUQrmAdQChqzKIUw}{172.17.0.3}{172.17.0.3:9300}{dimr}{shard_indexing_pressure_enabled=true}]}, term: 1, version: 1, reason: Publication{term=1, version=1}
+[2024-01-20T23:19:52,397][INFO ][o.o.a.c.ADClusterEventListener] [d95ac1b4c88b] Cluster is not recovered yet.
+[2024-01-20T23:19:52,401][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:52,415][INFO ][o.o.i.i.ManagedIndexCoordinator] [d95ac1b4c88b] Cache cluster manager node onClusterManager time: 1705792792415
+[2024-01-20T23:19:52,425][WARN ][o.o.p.c.s.h.ConfigOverridesClusterSettingHandler] [d95ac1b4c88b] Config override setting update called with empty string. Ignoring.
+[2024-01-20T23:19:52,431][INFO ][o.o.d.PeerFinder         ] [d95ac1b4c88b] setting findPeersInterval to [1s] as node commission status = [true] for local node [{d95ac1b4c88b}{z9cVYvh9Swi5EUvpYn7ExA}{9SdflYqUQrmAdQChqzKIUw}{172.17.0.3}{172.17.0.3:9300}{dimr}{shard_indexing_pressure_enabled=true}]
+[2024-01-20T23:19:52,435][INFO ][o.o.h.AbstractHttpServerTransport] [d95ac1b4c88b] publish_address {172.17.0.3:9200}, bound_addresses {[::]:9200}
+[2024-01-20T23:19:52,435][INFO ][o.o.n.Node               ] [d95ac1b4c88b] started
+[2024-01-20T23:19:52,435][INFO ][o.o.s.OpenSearchSecurityPlugin] [d95ac1b4c88b] Node started
+[2024-01-20T23:19:52,436][INFO ][o.o.s.c.ConfigurationRepository] [d95ac1b4c88b] Will attempt to create index .opendistro_security and default configs if they are absent
+[2024-01-20T23:19:52,437][INFO ][o.o.s.OpenSearchSecurityPlugin] [d95ac1b4c88b] 0 OpenSearch Security modules loaded so far: []
+[2024-01-20T23:19:52,436][INFO ][o.o.s.c.ConfigurationRepository] [d95ac1b4c88b] Background init thread started. Install default config?: true
+[2024-01-20T23:19:52,437][INFO ][o.o.s.c.ConfigurationRepository] [d95ac1b4c88b] Wait for cluster to be available ...
+[2024-01-20T23:19:52,447][INFO ][o.o.a.c.HashRing         ] [d95ac1b4c88b] Node added: [z9cVYvh9Swi5EUvpYn7ExA]
+[2024-01-20T23:19:52,448][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:52,450][INFO ][o.o.a.c.HashRing         ] [d95ac1b4c88b] Add data node to AD version hash ring: z9cVYvh9Swi5EUvpYn7ExA
+[2024-01-20T23:19:52,452][INFO ][o.o.a.c.HashRing         ] [d95ac1b4c88b] All nodes with known AD version: {z9cVYvh9Swi5EUvpYn7ExA=ADNodeInfo{version=2.11.1, isEligibleDataNode=true}}
+[2024-01-20T23:19:52,452][INFO ][o.o.a.c.HashRing         ] [d95ac1b4c88b] Rebuild AD hash ring for realtime AD with cooldown, nodeChangeEvents size 0
+[2024-01-20T23:19:52,452][INFO ][o.o.a.c.HashRing         ] [d95ac1b4c88b] Build AD version hash ring successfully
+[2024-01-20T23:19:52,453][INFO ][o.o.a.c.ADDataMigrator   ] [d95ac1b4c88b] Start migrating AD data
+[2024-01-20T23:19:52,453][INFO ][o.o.a.c.ADDataMigrator   ] [d95ac1b4c88b] AD job index doesn't exist, no need to migrate
+[2024-01-20T23:19:52,453][INFO ][o.o.a.c.ADClusterEventListener] [d95ac1b4c88b] Init AD version hash ring successfully
+[2024-01-20T23:19:52,462][INFO ][o.o.g.GatewayService     ] [d95ac1b4c88b] recovered [0] indices into cluster_state
+[2024-01-20T23:19:52,465][DEPRECATION][o.o.d.c.m.MetadataCreateIndexService] [d95ac1b4c88b] index name [.opensearch-observability] starts with a dot '.', in the next major version, index names starting with a dot are reserved for hidden indices and system indices
+[2024-01-20T23:19:52,481][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opensearch-observability/imunCAsmT7Cpvdj7TsmRxQ]
+[2024-01-20T23:19:52,581][INFO ][o.o.c.m.MetadataCreateIndexService] [d95ac1b4c88b] [.opensearch-observability] creating index, cause [api], templates [], shards [1]/[0]
+[2024-01-20T23:19:52,620][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opensearch-observability/imunCAsmT7Cpvdj7TsmRxQ]
+[2024-01-20T23:19:52,657][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:52,661][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opensearch-sap-log-types-config/ZVeQkc4qS9G8WPIm4lcRnQ]
+[2024-01-20T23:19:52,673][INFO ][o.o.c.m.MetadataCreateIndexService] [d95ac1b4c88b] [.opensearch-sap-log-types-config] creating index, cause [auto(sap-logtype api)], templates [], shards [1]/[1]
+[2024-01-20T23:19:52,674][INFO ][o.o.c.r.a.AllocationService] [d95ac1b4c88b] updating number_of_replicas to [0] for indices [.opensearch-sap-log-types-config]
+[2024-01-20T23:19:52,694][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opensearch-sap-log-types-config/ZVeQkc4qS9G8WPIm4lcRnQ]
+[2024-01-20T23:19:52,710][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:52,767][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:52,768][INFO ][o.o.s.l.LogTypeService   ] [d95ac1b4c88b] Loading builtin types!
+[2024-01-20T23:19:52,771][INFO ][o.o.s.l.LogTypeService   ] [d95ac1b4c88b] Indexing [429] fieldMappingDocs from logTypes: 24
+[2024-01-20T23:19:52,796][INFO ][o.o.c.r.a.AllocationService] [d95ac1b4c88b] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[.opensearch-observability][0]]]).
+[2024-01-20T23:19:52,811][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:52,811][INFO ][o.o.o.i.ObservabilityIndex] [d95ac1b4c88b] observability:Index .opensearch-observability creation Acknowledged
+[2024-01-20T23:19:52,812][INFO ][o.o.o.i.ObservabilityIntegrationsIndex] [d95ac1b4c88b] observability:createMappingTemplate ss4o_metrics_template API called
+[2024-01-20T23:19:52,824][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[validate-template-dczfehkfsy2ef9oblbhpng/fzVYrEZnR2ifRRmjIIKH2Q]
+[2024-01-20T23:19:52,830][INFO ][o.o.s.l.LogTypeService   ] [d95ac1b4c88b] Indexing [429] fieldMappingDocs
+[2024-01-20T23:19:52,844][INFO ][o.o.c.m.MetadataIndexTemplateService] [d95ac1b4c88b] adding index template [ss4o_metrics_template] for index patterns [ss4o_metrics-*-*]
+[2024-01-20T23:19:52,894][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:52,895][INFO ][o.o.o.i.ObservabilityIntegrationsIndex] [d95ac1b4c88b] observability:Mapping Template ss4o_metrics_template creation Acknowledged
+[2024-01-20T23:19:52,895][INFO ][o.o.o.i.ObservabilityIntegrationsIndex] [d95ac1b4c88b] observability:createMappingTemplate ss4o_traces_template API called
+[2024-01-20T23:19:52,900][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[validate-template-nnnxeu7trdo1s4i5demwnw/ZZMV32CcQs2ake_9Q71CQA]
+[2024-01-20T23:19:52,915][INFO ][o.o.c.m.MetadataIndexTemplateService] [d95ac1b4c88b] adding index template [ss4o_traces_template] for index patterns [ss4o_traces-*-*]
+[2024-01-20T23:19:52,935][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:52,936][INFO ][o.o.o.i.ObservabilityIntegrationsIndex] [d95ac1b4c88b] observability:Mapping Template ss4o_traces_template creation Acknowledged
+[2024-01-20T23:19:52,938][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opensearch-sap-log-types-config/ZVeQkc4qS9G8WPIm4lcRnQ]
+[2024-01-20T23:19:52,997][INFO ][o.o.c.m.MetadataMappingService] [d95ac1b4c88b] [.opensearch-sap-log-types-config/ZVeQkc4qS9G8WPIm4lcRnQ] update_mapping [_doc]
+[2024-01-20T23:19:53,019][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:53,024][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opensearch-sap-log-types-config/ZVeQkc4qS9G8WPIm4lcRnQ]
+[2024-01-20T23:19:53,052][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opensearch-sap-log-types-config/ZVeQkc4qS9G8WPIm4lcRnQ]
+[2024-01-20T23:19:53,061][INFO ][o.o.c.m.MetadataMappingService] [d95ac1b4c88b] [.opensearch-sap-log-types-config/ZVeQkc4qS9G8WPIm4lcRnQ] update_mapping [_doc]
+[2024-01-20T23:19:53,092][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:53,352][INFO ][o.o.s.l.LogTypeService   ] [d95ac1b4c88b] Loaded [429] field mapping docs successfully!
+[2024-01-20T23:19:53,372][INFO ][o.o.s.l.LogTypeService   ] [d95ac1b4c88b] Indexing [23] customLogTypes
+[2024-01-20T23:19:53,402][INFO ][o.o.s.l.LogTypeService   ] [d95ac1b4c88b] Loaded [23] customLogType docs successfully!
+[2024-01-20T23:19:53,402][INFO ][o.o.s.SecurityAnalyticsPlugin] [d95ac1b4c88b] LogType config index successfully created and builtin log types loaded
+[2024-01-20T23:19:53,432][INFO ][o.o.s.i.DetectorIndexManagementService] [d95ac1b4c88b] No Old Correlation Indices to delete
+[2024-01-20T23:19:53,441][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opendistro_security/m61_13KLQN-7KICeiUJ7Rg]
+[2024-01-20T23:19:53,444][INFO ][o.o.c.m.MetadataCreateIndexService] [d95ac1b4c88b] [.opendistro_security] creating index, cause [api], templates [], shards [1]/[1]
+[2024-01-20T23:19:53,445][INFO ][o.o.c.r.a.AllocationService] [d95ac1b4c88b] updating number_of_replicas to [0] for indices [.opendistro_security]
+[2024-01-20T23:19:53,461][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opendistro_security/m61_13KLQN-7KICeiUJ7Rg]
+[2024-01-20T23:19:53,469][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:53,489][INFO ][o.o.c.r.a.AllocationService] [d95ac1b4c88b] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[.opendistro_security][0]]]).
+[2024-01-20T23:19:53,505][INFO ][o.o.s.i.DetectorIndexManagementService] [d95ac1b4c88b] No Old Alert Indices to delete
+[2024-01-20T23:19:53,505][INFO ][o.o.s.i.DetectorIndexManagementService] [d95ac1b4c88b] No Old Finding Indices to delete
+[2024-01-20T23:19:53,506][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:53,506][INFO ][o.o.s.c.ConfigurationRepository] [d95ac1b4c88b] Index .opendistro_security created?: true
+[2024-01-20T23:19:53,507][INFO ][o.o.s.c.ConfigurationRepository] [d95ac1b4c88b] Node started, try to initialize it. Wait for at least yellow cluster state....
+[2024-01-20T23:19:53,512][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Will update 'config' with /usr/share/opensearch/config/opensearch-security/config.yml and populate it with empty doc if file missing and populateEmptyIfFileMissing=false
+[2024-01-20T23:19:53,593][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opendistro_security/m61_13KLQN-7KICeiUJ7Rg]
+[2024-01-20T23:19:53,597][INFO ][o.o.c.m.MetadataMappingService] [d95ac1b4c88b] [.opendistro_security/m61_13KLQN-7KICeiUJ7Rg] create_mapping
+[2024-01-20T23:19:53,612][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:53,627][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Doc with id 'config' and version 2 is updated in .opendistro_security index.
+[2024-01-20T23:19:53,627][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Will update 'roles' with /usr/share/opensearch/config/opensearch-security/roles.yml and populate it with empty doc if file missing and populateEmptyIfFileMissing=false
+[2024-01-20T23:19:53,638][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opendistro_security/m61_13KLQN-7KICeiUJ7Rg]
+[2024-01-20T23:19:53,643][INFO ][o.o.c.m.MetadataMappingService] [d95ac1b4c88b] [.opendistro_security/m61_13KLQN-7KICeiUJ7Rg] update_mapping [_doc]
+[2024-01-20T23:19:53,700][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:53,716][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Doc with id 'roles' and version 2 is updated in .opendistro_security index.
+[2024-01-20T23:19:53,716][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Will update 'rolesmapping' with /usr/share/opensearch/config/opensearch-security/roles_mapping.yml and populate it with empty doc if file missing and populateEmptyIfFileMissing=false
+[2024-01-20T23:19:53,728][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opendistro_security/m61_13KLQN-7KICeiUJ7Rg]
+[2024-01-20T23:19:53,732][INFO ][o.o.c.m.MetadataMappingService] [d95ac1b4c88b] [.opendistro_security/m61_13KLQN-7KICeiUJ7Rg] update_mapping [_doc]
+[2024-01-20T23:19:53,796][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:53,811][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Doc with id 'rolesmapping' and version 2 is updated in .opendistro_security index.
+[2024-01-20T23:19:53,811][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Will update 'internalusers' with /usr/share/opensearch/config/opensearch-security/internal_users.yml and populate it with empty doc if file missing and populateEmptyIfFileMissing=false
+[2024-01-20T23:19:53,824][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opendistro_security/m61_13KLQN-7KICeiUJ7Rg]
+[2024-01-20T23:19:53,828][INFO ][o.o.c.m.MetadataMappingService] [d95ac1b4c88b] [.opendistro_security/m61_13KLQN-7KICeiUJ7Rg] update_mapping [_doc]
+[2024-01-20T23:19:53,845][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:53,898][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Doc with id 'internalusers' and version 2 is updated in .opendistro_security index.
+[2024-01-20T23:19:53,899][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Will update 'actiongroups' with /usr/share/opensearch/config/opensearch-security/action_groups.yml and populate it with empty doc if file missing and populateEmptyIfFileMissing=false
+[2024-01-20T23:19:53,904][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opendistro_security/m61_13KLQN-7KICeiUJ7Rg]
+[2024-01-20T23:19:53,909][INFO ][o.o.c.m.MetadataMappingService] [d95ac1b4c88b] [.opendistro_security/m61_13KLQN-7KICeiUJ7Rg] update_mapping [_doc]
+[2024-01-20T23:19:53,923][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:53,938][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Doc with id 'actiongroups' and version 2 is updated in .opendistro_security index.
+[2024-01-20T23:19:53,938][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Will update 'tenants' with /usr/share/opensearch/config/opensearch-security/tenants.yml and populate it with empty doc if file missing and populateEmptyIfFileMissing=false
+[2024-01-20T23:19:53,944][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opendistro_security/m61_13KLQN-7KICeiUJ7Rg]
+[2024-01-20T23:19:53,990][INFO ][o.o.c.m.MetadataMappingService] [d95ac1b4c88b] [.opendistro_security/m61_13KLQN-7KICeiUJ7Rg] update_mapping [_doc]
+[2024-01-20T23:19:54,006][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:54,019][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Doc with id 'tenants' and version 2 is updated in .opendistro_security index.
+[2024-01-20T23:19:54,019][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Will update 'nodesdn' with /usr/share/opensearch/config/opensearch-security/nodes_dn.yml and populate it with empty doc if file missing and populateEmptyIfFileMissing=true
+[2024-01-20T23:19:54,023][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opendistro_security/m61_13KLQN-7KICeiUJ7Rg]
+[2024-01-20T23:19:54,029][INFO ][o.o.c.m.MetadataMappingService] [d95ac1b4c88b] [.opendistro_security/m61_13KLQN-7KICeiUJ7Rg] update_mapping [_doc]
+[2024-01-20T23:19:54,044][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:54,057][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Doc with id 'nodesdn' and version 2 is updated in .opendistro_security index.
+[2024-01-20T23:19:54,057][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Will update 'whitelist' with /usr/share/opensearch/config/opensearch-security/whitelist.yml and populate it with empty doc if file missing and populateEmptyIfFileMissing=true
+[2024-01-20T23:19:54,063][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opendistro_security/m61_13KLQN-7KICeiUJ7Rg]
+[2024-01-20T23:19:54,092][INFO ][o.o.c.m.MetadataMappingService] [d95ac1b4c88b] [.opendistro_security/m61_13KLQN-7KICeiUJ7Rg] update_mapping [_doc]
+[2024-01-20T23:19:54,107][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:54,121][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Doc with id 'whitelist' and version 2 is updated in .opendistro_security index.
+[2024-01-20T23:19:54,121][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Will update 'allowlist' with /usr/share/opensearch/config/opensearch-security/allowlist.yml and populate it with empty doc if file missing and populateEmptyIfFileMissing=true
+[2024-01-20T23:19:54,127][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opendistro_security/m61_13KLQN-7KICeiUJ7Rg]
+[2024-01-20T23:19:54,131][INFO ][o.o.c.m.MetadataMappingService] [d95ac1b4c88b] [.opendistro_security/m61_13KLQN-7KICeiUJ7Rg] update_mapping [_doc]
+[2024-01-20T23:19:54,146][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:54,158][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Doc with id 'allowlist' and version 2 is updated in .opendistro_security index.
+[2024-01-20T23:19:54,159][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Will update 'audit' with /usr/share/opensearch/config/opensearch-security/audit.yml and populate it with empty doc if file missing and populateEmptyIfFileMissing=false
+[2024-01-20T23:19:54,192][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.opendistro_security/m61_13KLQN-7KICeiUJ7Rg]
+[2024-01-20T23:19:54,197][INFO ][o.o.c.m.MetadataMappingService] [d95ac1b4c88b] [.opendistro_security/m61_13KLQN-7KICeiUJ7Rg] update_mapping [_doc]
+[2024-01-20T23:19:54,213][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:19:54,230][INFO ][o.o.s.s.ConfigHelper     ] [d95ac1b4c88b] Doc with id 'audit' and version 2 is updated in .opendistro_security index.
+[2024-01-20T23:19:54,364][INFO ][stdout                   ] [d95ac1b4c88b] [FINE] No subscribers registered for event class org.opensearch.security.securityconf.DynamicConfigFactory$NodesDnModelImpl
+[2024-01-20T23:19:54,364][INFO ][stdout                   ] [d95ac1b4c88b] [FINE] No subscribers registered for event class org.greenrobot.eventbus.NoSubscriberEvent
+[2024-01-20T23:19:54,364][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Auditing on REST API is enabled.
+[2024-01-20T23:19:54,364][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] [AUTHENTICATED, GRANTED_PRIVILEGES] are excluded from REST API auditing.
+[2024-01-20T23:19:54,364][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Auditing on Transport API is enabled.
+[2024-01-20T23:19:54,365][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] [AUTHENTICATED, GRANTED_PRIVILEGES] are excluded from Transport API auditing.
+[2024-01-20T23:19:54,365][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Auditing of request body is enabled.
+[2024-01-20T23:19:54,365][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Bulk requests resolution is disabled during request auditing.
+[2024-01-20T23:19:54,365][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Index resolution is enabled during request auditing.
+[2024-01-20T23:19:54,365][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Sensitive headers auditing is enabled.
+[2024-01-20T23:19:54,365][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Auditing requests from kibanaserver users is disabled.
+[2024-01-20T23:19:54,367][WARN ][o.o.s.a.r.AuditMessageRouter] [d95ac1b4c88b] No endpoint configured for categories [BAD_HEADERS, FAILED_LOGIN, MISSING_PRIVILEGES, GRANTED_PRIVILEGES, OPENDISTRO_SECURITY_INDEX_ATTEMPT, SSL_EXCEPTION, AUTHENTICATED, INDEX_EVENT, COMPLIANCE_DOC_READ, COMPLIANCE_DOC_WRITE, COMPLIANCE_EXTERNAL_CONFIG, COMPLIANCE_INTERNAL_CONFIG_READ, COMPLIANCE_INTERNAL_CONFIG_WRITE], using default endpoint
+[2024-01-20T23:19:54,367][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Auditing of external configuration is disabled.
+[2024-01-20T23:19:54,367][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Auditing of internal configuration is enabled.
+[2024-01-20T23:19:54,367][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Auditing only metadata information for read request is enabled.
+[2024-01-20T23:19:54,368][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Auditing will watch {} for read requests.
+[2024-01-20T23:19:54,368][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Auditing read operation requests from kibanaserver users is disabled.
+[2024-01-20T23:19:54,369][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Auditing only metadata information for write request is enabled.
+[2024-01-20T23:19:54,369][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Auditing diffs for write requests is disabled.
+[2024-01-20T23:19:54,370][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Auditing write operation requests from kibanaserver users is disabled.
+[2024-01-20T23:19:54,370][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Auditing will watch <NONE> for write requests.
+[2024-01-20T23:19:54,370][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] .opendistro_security is used as internal security index.
+[2024-01-20T23:19:54,370][INFO ][o.o.s.a.i.AuditLogImpl   ] [d95ac1b4c88b] Internal index used for posting audit logs is null
+[2024-01-20T23:19:54,370][INFO ][o.o.s.c.ConfigurationRepository] [d95ac1b4c88b] Hot-reloading of audit configuration is enabled
+[2024-01-20T23:19:54,371][INFO ][o.o.s.c.ConfigurationRepository] [d95ac1b4c88b] Node 'd95ac1b4c88b' initialized
+[2024-01-20T23:20:02,426][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.plugins-ml-config/D09zFfkiTgmpMz6dLaU7KQ]
+[2024-01-20T23:20:02,429][INFO ][o.o.c.m.MetadataCreateIndexService] [d95ac1b4c88b] [.plugins-ml-config] creating index, cause [api], templates [], shards [1]/[1]
+[2024-01-20T23:20:02,430][INFO ][o.o.c.r.a.AllocationService] [d95ac1b4c88b] updating number_of_replicas to [0] for indices [.plugins-ml-config]
+[2024-01-20T23:20:02,443][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[.plugins-ml-config/D09zFfkiTgmpMz6dLaU7KQ]
+[2024-01-20T23:20:02,449][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:20:02,474][INFO ][o.o.c.r.a.AllocationService] [d95ac1b4c88b] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[.plugins-ml-config][0]]]).
+[2024-01-20T23:20:02,488][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:20:02,489][INFO ][o.o.m.i.MLIndicesHandler ] [d95ac1b4c88b] create index:.plugins-ml-config
+[2024-01-20T23:20:02,517][INFO ][o.o.m.c.MLSyncUpCron     ] [d95ac1b4c88b] ML configuration initialized successfully
+[2024-01-20T23:20:52,417][INFO ][o.o.i.i.ManagedIndexCoordinator] [d95ac1b4c88b] Performing move cluster state metadata.
+[2024-01-20T23:20:52,417][INFO ][o.o.i.i.MetadataService  ] [d95ac1b4c88b] ISM config index not exist, so we cancel the metadata migration job.
+[2024-01-20T23:20:52,418][INFO ][o.o.i.i.ManagedIndexCoordinator] [d95ac1b4c88b] Performing ISM template migration.
+[2024-01-20T23:20:52,418][INFO ][o.o.i.i.m.ISMTemplateService] [d95ac1b4c88b] Doing ISM template migration 1 time.
+[2024-01-20T23:20:52,418][INFO ][o.o.i.i.m.ISMTemplateService] [d95ac1b4c88b] Use 2024-01-20T22:19:52.415Z as migrating ISM template last_updated_time
+[2024-01-20T23:20:52,424][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[simulate_template_index_xegpobhnrrojjvzne7nndg/G_l0TEBjTmOb6yD4Ug3O-Q]
+[2024-01-20T23:20:52,427][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[simulate_template_index_xegpobhnrrojjvzne7nndg/G_l0TEBjTmOb6yD4Ug3O-Q]
+[2024-01-20T23:20:52,437][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[simulate_template_index_gk3kcak4szolidvy5u3yca/XdTfsoqDQu-TCs9wfQOD0g]
+[2024-01-20T23:20:52,439][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[simulate_template_index_gk3kcak4szolidvy5u3yca/XdTfsoqDQu-TCs9wfQOD0g]
+[2024-01-20T23:20:52,443][INFO ][o.o.i.i.m.ISMTemplateService] [d95ac1b4c88b] ISM templates: {=[ISMTemplate(indexPatterns=[ss4o_metrics-*-*], priority=1, lastUpdatedTime=2024-01-20T22:19:52.415Z), ISMTemplate(indexPatterns=[ss4o_traces-*-*], priority=1, lastUpdatedTime=2024-01-20T22:19:52.415Z)]}
+[2024-01-20T23:20:52,444][INFO ][o.o.i.i.m.ISMTemplateService] [d95ac1b4c88b] Policies to update: []
+[2024-01-20T23:20:52,446][INFO ][o.o.i.i.m.ISMTemplateService] [d95ac1b4c88b] Failure experienced when migrating ISM Template and update ISM policies: {}
+[2024-01-20T23:20:52,468][INFO ][o.o.c.s.ClusterSettings  ] [d95ac1b4c88b] updating [plugins.index_state_management.template_migration.control] from [0] to [-1]
+[2024-01-20T23:20:52,469][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:20:52,471][INFO ][o.o.i.i.m.ISMTemplateService] [d95ac1b4c88b] Successfully update template migration setting
+[2024-01-20T23:21:52,417][INFO ][o.o.i.i.ManagedIndexCoordinator] [d95ac1b4c88b] Cancel background move metadata process.
+[2024-01-20T23:21:52,418][INFO ][o.o.i.i.ManagedIndexCoordinator] [d95ac1b4c88b] Performing move cluster state metadata.
+[2024-01-20T23:21:52,418][INFO ][o.o.i.i.MetadataService  ] [d95ac1b4c88b] Move metadata has finished.
+[2024-01-20T23:24:52,199][INFO ][o.o.j.s.JobSweeper       ] [d95ac1b4c88b] Running full sweep
+[2024-01-20T23:24:52,421][INFO ][o.o.i.i.PluginVersionSweepCoordinator] [d95ac1b4c88b] Canceling sweep ism plugin version job
+[2024-01-20T23:29:52,200][INFO ][o.o.j.s.JobSweeper       ] [d95ac1b4c88b] Running full sweep
+[2024-01-20T23:34:52,201][INFO ][o.o.j.s.JobSweeper       ] [d95ac1b4c88b] Running full sweep
+[2024-01-20T23:39:52,201][INFO ][o.o.j.s.JobSweeper       ] [d95ac1b4c88b] Running full sweep
+[2024-01-20T23:44:52,202][INFO ][o.o.j.s.JobSweeper       ] [d95ac1b4c88b] Running full sweep
+[2024-01-20T23:49:52,202][INFO ][o.o.j.s.JobSweeper       ] [d95ac1b4c88b] Running full sweep
+[2024-01-20T23:54:52,202][INFO ][o.o.j.s.JobSweeper       ] [d95ac1b4c88b] Running full sweep
+[2024-01-20T23:57:15,741][ERROR][o.o.s.s.h.n.SecuritySSLNettyHttpServerTransport] [d95ac1b4c88b] Exception during establishing a SSL connection: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965733f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965733f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1313) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1383) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:689) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:652) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+[2024-01-20T23:57:15,746][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[security-auditlog-2024.01.20/fFigjtvbSIOJuaXYWU2mDA]
+[2024-01-20T23:57:15,746][WARN ][o.o.h.AbstractHttpServerTransport] [d95ac1b4c88b] caught exception while handling client http traffic, closing connection Netty4HttpChannel{localAddress=/172.17.0.3:9200, remoteAddress=/172.17.0.1:46124}
+io.netty.handler.codec.DecoderException: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965733f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:499) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:689) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:652) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965733f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1313) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1383) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	... 16 more
+[2024-01-20T23:57:15,748][INFO ][o.o.c.m.MetadataCreateIndexService] [d95ac1b4c88b] [security-auditlog-2024.01.20] creating index, cause [auto(bulk api)], templates [], shards [1]/[1]
+[2024-01-20T23:57:15,764][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[security-auditlog-2024.01.20/fFigjtvbSIOJuaXYWU2mDA]
+[2024-01-20T23:57:15,770][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:57:15,812][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:57:15,822][INFO ][o.o.p.PluginsService     ] [d95ac1b4c88b] PluginService:onIndexModule index:[security-auditlog-2024.01.20/fFigjtvbSIOJuaXYWU2mDA]
+[2024-01-20T23:57:15,825][INFO ][o.o.c.m.MetadataMappingService] [d95ac1b4c88b] [security-auditlog-2024.01.20/fFigjtvbSIOJuaXYWU2mDA] create_mapping
+[2024-01-20T23:57:15,839][INFO ][o.o.a.u.d.DestinationMigrationCoordinator] [d95ac1b4c88b] Detected cluster change event for destination migration
+[2024-01-20T23:57:25,945][ERROR][o.o.s.s.h.n.SecuritySSLNettyHttpServerTransport] [d95ac1b4c88b] Exception during establishing a SSL connection: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965732f5f7365617263683f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965732f5f7365617263683f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1313) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1383) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:689) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:652) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+[2024-01-20T23:57:25,946][WARN ][o.o.h.AbstractHttpServerTransport] [d95ac1b4c88b] caught exception while handling client http traffic, closing connection Netty4HttpChannel{localAddress=/172.17.0.3:9200, remoteAddress=/172.17.0.1:52014}
+io.netty.handler.codec.DecoderException: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965732f5f7365617263683f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:499) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:689) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:652) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965732f5f7365617263683f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1313) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1383) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	... 16 more
+[2024-01-20T23:58:20,449][ERROR][o.o.s.s.h.n.SecuritySSLNettyHttpServerTransport] [d95ac1b4c88b] Exception during establishing a SSL connection: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965733f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965733f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1313) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1383) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:689) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:652) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+[2024-01-20T23:58:20,450][WARN ][o.o.h.AbstractHttpServerTransport] [d95ac1b4c88b] caught exception while handling client http traffic, closing connection Netty4HttpChannel{localAddress=/172.17.0.3:9200, remoteAddress=/172.17.0.1:52548}
+io.netty.handler.codec.DecoderException: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965733f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:499) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:689) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:652) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965733f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1313) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1383) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	... 16 more
+[2024-01-20T23:58:25,833][ERROR][o.o.s.s.h.n.SecuritySSLNettyHttpServerTransport] [d95ac1b4c88b] Exception during establishing a SSL connection: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965732f5f7365617263683f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965732f5f7365617263683f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1313) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1383) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:689) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:652) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+[2024-01-20T23:58:25,834][WARN ][o.o.h.AbstractHttpServerTransport] [d95ac1b4c88b] caught exception while handling client http traffic, closing connection Netty4HttpChannel{localAddress=/172.17.0.3:9200, remoteAddress=/172.17.0.1:55046}
+io.netty.handler.codec.DecoderException: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965732f5f7365617263683f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:499) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:689) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:652) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965732f5f7365617263683f70726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1313) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1383) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	... 16 more
+[2024-01-20T23:58:33,745][ERROR][o.o.s.s.h.n.SecuritySSLNettyHttpServerTransport] [d95ac1b4c88b] Exception during establishing a SSL connection: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965732f5f7365617263683f713d2a2670726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965732f5f7365617263683f713d2a2670726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1313) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1383) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:689) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:652) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+[2024-01-20T23:58:33,745][WARN ][o.o.h.AbstractHttpServerTransport] [d95ac1b4c88b] caught exception while handling client http traffic, closing connection Netty4HttpChannel{localAddress=/172.17.0.3:9200, remoteAddress=/172.17.0.1:47220}
+io.netty.handler.codec.DecoderException: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965732f5f7365617263683f713d2a2670726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:499) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:290) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysPlain(NioEventLoop.java:689) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:652) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) [netty-transport-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) [netty-common-4.1.100.Final.jar:4.1.100.Final]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: io.netty.handler.ssl.NotSslRecordException: not an SSL/TLS record: 474554202f66756e2d73746f726965732f5f7365617263683f713d2a2670726574747920485454502f312e310d0a486f73743a206c6f63616c686f73743a393230300d0a557365722d4167656e743a206375726c2f372e38312e300d0a4163636570743a202a2f2a0d0a0d0a
+	at io.netty.handler.ssl.SslHandler.decodeJdkCompatible(SslHandler.java:1313) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.ssl.SslHandler.decode(SslHandler.java:1383) ~[netty-handler-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.decodeRemovalReentryProtection(ByteToMessageDecoder.java:529) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	at io.netty.handler.codec.ByteToMessageDecoder.callDecode(ByteToMessageDecoder.java:468) ~[netty-codec-4.1.100.Final.jar:4.1.100.Final]
+	... 16 more
+[2024-01-20T23:59:52,202][INFO ][o.o.j.s.JobSweeper       ] [d95ac1b4c88b] Running full sweep
+[2024-01-21T00:04:52,203][INFO ][o.o.j.s.JobSweeper       ] [d95ac1b4c88b] Running full sweep
+[2024-01-21T00:09:52,203][INFO ][o.o.j.s.JobSweeper       ] [d95ac1b4c88b] Running full sweep
+[2024-01-21T00:14:52,204][INFO ][o.o.j.s.JobSweeper       ] [d95ac1b4c88b] Running full sweep
